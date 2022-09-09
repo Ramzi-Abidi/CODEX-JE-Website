@@ -99,16 +99,64 @@ function removeOverlayAndForm() {
 
 // removing the form and the overlay :
 document.addEventListener("click", (e) => {
-    if (e.target != getStartedForm && e.target != getStartedBtn && e.target.className != "title-send-request" && e.target.className != "input" && e.target.className != "content" && e.target.className != "submit-btn") {
+    //console.log(e.target.className);
+
+    if (e.target != getStartedForm && e.target != getStartedBtn && e.target.className != "title-send-request" && e.target.className != "input" && e.target.className != "content" && e.target.className != "submit-btn" && e.target.className != "web-project" && e.target.className != "mobile-project" && e.target.className != "web" && e.target.className != "mobile" && e.target.className != "radio-btn" && e.target.className != "our-getStarted-form" && e.target.className.indexOf("input") == -1) {
         if (getStartedForm.classList.contains("active")) {
             removeOverlayAndForm();
         }
     }
 });
 
-// sending the request to the email js :
+// sending the request to the server js :
+document.querySelector(".our-getStarted-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const username = document.querySelector(".username").value;
+    const phoneNum = document.querySelector(".phoneNum").value;
+    const email = document.querySelector(".email").value;
+    const project = document.querySelector(".radio-btn").value;
+    const text = document.querySelector(".text").value;
 
-document.querySelector(".submit-btn").addEventListener("click", () => {
-    alert("a");
-    removeOverlayAndForm();
-})
+    /*  console.log(username);
+     console.log(phoneNum);
+     console.log(email);
+     console.log(project);
+     console.log(text); */
+
+    let user = {
+        username: username.trim(),
+        email: email.trim(),
+        phoneNum: phoneNum.trim(),
+        project: project,
+        text: text.trim(),
+    }
+
+
+    console.log(user);
+
+    const params = {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    }
+    fetch("http://localhost:5000/", params)
+        .then((res) => {
+            console.log(res.json()) ;
+            return res.json();
+        })
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+});
+
+
+
+
+/*  
+    */
+

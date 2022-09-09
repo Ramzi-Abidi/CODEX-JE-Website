@@ -53,18 +53,18 @@
                             </li> -->
                         </ul>
                         <ul class="links">
-                            <li>
+                           <!--  <li>
                                 <a href="#work-steps"><i class="far fa-clipboard fa-fw"></i> How It Works</a>
-                            </li>
+                            </li> -->
                             <!--          <li>
                                 <a href="#video"><i class="far fa-play-circle fa-fw"></i> Top Videos</a>
                             </li> -->
                             <li>
                                 <a href="#stats"><i class="far fa-chart-bar fa-fw"></i> Stats</a>
                             </li>
-                            <li>
+                         <!--    <li>
                                 <a href="#discount"><i class="fas fa-percent fa-fw"></i> Request A Discount</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <!-- End Megamenu -->
@@ -75,19 +75,25 @@
     </header>
 
     <!-- get started form  -->
-        <div class="form getStarted-form">
-            <div class="content">
-                <h2 class="title-send-request">send a Request</h2>
-                <form action="#">
-                    <input class="input" type="text" placeholder="Your Name" name="name" />
-                    <input class="input" type="email" placeholder="Your Email" name="email" />
-                    <input class="input" type="text" placeholder="Your Phone" name="mobile" />
-                    <textarea class="input" placeholder="Tell Us About the project That You Need"
-                        name="message"></textarea>
-                    <input type="submit" value="Send" class="submit-btn"/>
-                </form>
-            </div>
+    <div class="form getStarted-form">
+        <div class="content">
+            <h2 class="title-send-request">send a Request</h2>
+            <form class="our-getStarted-form" method="POST">
+                <input class="input username" type="text" placeholder="Your Name" name="name" required />
+                <input class="input email" type="email" placeholder="Your Email" name="email" required />
+                <input class="input phoneNum" type="text" placeholder="Your Phone" name="mobile" required />
+
+                <input type="radio" id="web-project" value="Web Project" name="radio-btn" class="radio-btn" /> <label
+                    for="web-project" class="web"> Web Project </label>
+                <input type="radio" id="mobile-project" value="Mobile Project" name="radio-btn" class="radio-btn" />
+                <label for="mobile-project" class="mobile"> Mobile Project </label>
+                <textarea class="input text" placeholder="Tell Us About the project That You Need" name="message"
+                    required>
+                </textarea>
+                <input type="submit" value="Send" class="submit-btn" />
+            </form>
         </div>
+    </div>
     <!-- end getStarted form -->
 
     <div class="landing">
@@ -132,13 +138,12 @@
                 <h3 class="service-item"> mobile development </h3>
 
             </div>
-            <div class="box">
+            <!--             <div class="box">
                 <div class="image">
                     <img src="imgs/gallery-03.jpg" alt="" />
                 </div>
                 <h3 class="service-item"> marketing </h3>
-
-            </div>
+            </div> -->
             <!-- <div class="box">
                 <div class="image">
                     <img src="imgs/gallery-04.png" alt="" />
@@ -462,7 +467,7 @@
     <div class="footer">
         <div class="container">
             <div class="box">
-                <h3>Elzero</h3>
+                <h3>Follow us</h3>
                 <ul class="social">
                     <li>
                         <a href="#" class="facebook">
@@ -480,25 +485,23 @@
                         </a>
                     </li>
                 </ul>
-                <p class="text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nulla rem, dignissimos iste
-                    aspernatur
+                <p class="text" style="margin-top : .7rem;">
+                    follow us on all social media platforms 
                 </p>
             </div>
             <div class="box">
                 <ul class="links">
-                    <li><a href="#">Important Link 1</a></li>
-                    <li><a href="#">Important Link 2</a></li>
-                    <li><a href="#">Important Link 3</a></li>
-                    <li><a href="#">Important Link 4</a></li>
-                    <li><a href="#">Important Link 5</a></li>
+                    <li><a href="#services">Sevices</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="#team">Team Members</a></li>
                 </ul>
             </div>
             <div class="box">
 
                 <div class="line">
                     <i class="far fa-clock fa-fw"></i>
-                    <div class="info">Business Hours: From 10:00 To 18:00</div>
+                    <div class="info">Business Hours: From 9:00 To 17:00</div>
                 </div>
                 <div class="line">
                     <i class="fas fa-phone-volume fa-fw"></i>

@@ -6,7 +6,6 @@
 
 :root {
     --shadow-1: 10px 10px 19px #060607, -10px -10px 19px #262626;
-
     --main-transition: .6s;
     --main-color: #2196f3;
     --second-color: #1579ca;
@@ -409,11 +408,12 @@ header .logo img {
 
 .services .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
     gap: 40px;
 }
 
 .services .box {
+    width:85% ;
     padding: 1rem;
     box-shadow: 0 12px 20px 0 rgb(0 0 0 / 17%), 0 2px 4px 0 rgb(0 0 0 / 28%);
 }
@@ -1027,7 +1027,7 @@ header .logo img {
     width: 40%;
     transition: .5s;
     position: absolute;
-    top: -40%;
+    top: -46%;
     transform: translate(-50%, -50%);
     left: 50%;
     z-index: 1;
@@ -1109,7 +1109,7 @@ header .logo img {
 
 .footer .box h3 {
     color: white;
-    font-size: 50px;
+    font-size: 28px;
     margin: 0 0 20px;
 }
 
